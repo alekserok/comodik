@@ -1,0 +1,21 @@
+.page_container {
+    width: 960px;
+    background: 0% 0% no-repeat #FFFFFF;
+    height: 100%;
+}
+
+#middle_container {
+    width: 960px;
+}
+
+.preview-main-container, .main-container {
+    width: 960px;
+    z-index: 101;
+    anchor-id: #block-page;
+    background-no-scroll: on;
+    height: 5626px;
+}
+
+.preview-main-container {
+    min-width: 960px !important;
+}
