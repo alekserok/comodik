@@ -9,3 +9,6 @@ Homestead.json
 composer.lock
 .vagrant
 puphpet/files/dot
+/public/views
+/public/app.js
+/public/style.css

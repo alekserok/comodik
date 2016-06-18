@@ -10,17 +10,13 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
 Route::group(['middleware' => ['web']], function () {
-    
-    Route::get('/', function () {
-        return view('index');
-    });
 
     Route::post('/login', 'Auth\AuthController@login');
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('logout', 'Auth\AuthController@logout');
-        Route::post('user/image', 'UserController@loadImage');
     });
 
     Route::get('/admin', function () {
@@ -43,3 +39,9 @@ Route::group(['middleware' => ['web']], function () {
         return view('auth.login');
     });
 });
+
+
+Route::any('{path?}', function()
+{
+    return File::get(public_path() . '/index.html');
+})->where("path", ".+");
