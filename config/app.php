@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\DropboxFilesystemServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Illuminate\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -204,6 +205,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Form'=> Illuminate\Html\FormFacade::class,
+        'HTML'=> Illuminate\Html\HtmlFacade::class,
 
     ],
 

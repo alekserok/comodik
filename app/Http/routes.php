@@ -17,6 +17,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::group(['middleware' => 'auth'], function () {
         Route::get('logout', 'Auth\AuthController@logout');
+        Route::resource('admin/page', 'PageController');
     });
 
     Route::get('/admin', function () {
