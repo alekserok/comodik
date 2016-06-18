@@ -41,6 +41,9 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 
+Route::post('callback', 'UserController@callback');
+
+
 Route::any('{path?}', function()
 {
     return File::get(public_path() . '/index.html');

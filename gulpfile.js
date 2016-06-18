@@ -21,6 +21,7 @@ var paths = {
         "node_modules/angular-route/angular-route.js",
         "node_modules/angular-cookies/angular-cookies.min.js",
         "node_modules/angular-animate/angular-animate.min.js",
+        'node_modules/angular-toastr/dist/angular-toastr.tpls.js',
         "resources/comodik_web/js/*",
         "resources/comodik_web/controllers/*"
     ],

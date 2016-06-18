@@ -25,4 +25,13 @@ class UserController extends Controller
         );
         return response(['status' => 'ok']);
     }
+
+    public function callback(Request $request)
+    {
+        User::create([
+            'name' => $request['name'],
+            'phone' => $request['phone'],
+        ]);
+        return response(['status' => 'ok']);
+    }
 }

@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Users</div>
+                    <div class="panel-heading">Callback</div>
 
                     <div class="panel-body">
                         <table class="table table-striped">
@@ -21,7 +21,7 @@
                                 <th>Created at</th>
                             </tr>
                             @foreach($users as $user)
-                                <tr onclick="window.document.location='/admin/user/{{$user->id}}/downloads';">
+                                <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->phone }}</td>
