@@ -9,10 +9,15 @@ class Page extends Model
     protected $table = 'pages';
 
     protected $fillable = [
-        'parent_id',
+        'type_id',
         'title',
         'description',
         'body',
         'image'
     ];
+
+    public function type()
+    {
+        return $this->belongsTo('App\Type');
+    }
 }

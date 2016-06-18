@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PageRequest;
 use App\Page;
+use App\Type;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -42,7 +43,9 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('page.create');
+        $types = Type::typeList();
+        $types[0] = 'Корінь';
+        return view('page.create', ['types' => $types, 'currentType' => 0]);
     }
 
     /**
@@ -69,7 +72,10 @@ class PageController extends Controller
     public function edit($nid)
     {
         $page = $this->page->findOrFail($nid);
-        return view('page.edit', compact('page'));
+        $types = Type::typeList();
+        $types[0] = 'Корінь';
+        $currentType = $page->type_id;
+        return view('page.edit', compact('page', 'types', 'currentType'));
     }
 
     /**

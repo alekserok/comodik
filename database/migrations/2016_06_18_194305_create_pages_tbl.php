@@ -14,7 +14,8 @@ class CreatePagesTbl extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('parent_id')->default(0);
+            $table->integer('type_id')->unsigned();
+            $table->foreign('type_id')->references('id')->on('types');
             $table->string('title');
             $table->string('description');
             $table->text('body');

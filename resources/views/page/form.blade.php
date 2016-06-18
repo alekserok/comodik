@@ -1,3 +1,7 @@
+<div class="form-group">
+    {!! Form::label('type_id', 'Батьківська категорія') !!}
+    {!! Form::select('type_id', $types, $currentType, ['class' => 'form-control']) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('title', 'Title') !!}

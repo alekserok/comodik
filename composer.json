@@ -11,7 +11,8 @@
         "league/flysystem-dropbox": "^1.0",
         "acacha/admin-lte-template-laravel": "2.*",
         "zircote/swagger-php": "^2.0",
-        "illuminate/html": "5.*"
+        "illuminate/html": "5.*",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
