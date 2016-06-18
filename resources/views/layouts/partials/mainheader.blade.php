@@ -127,7 +127,7 @@
                                 <img src="/img/user-logo.png" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Auth::user()->name }}
-                                    <small>Member since Nov. 2012</small>
+                                    {{--<small>Member since Nov. 2012</small>--}}
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -156,9 +156,9 @@
                 @endif
 
                 <!-- Control Sidebar Toggle Button -->
-                <li>
+                {{--<li>
                     <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+                </li>--}}
             </ul>
         </div>
     </nav>
