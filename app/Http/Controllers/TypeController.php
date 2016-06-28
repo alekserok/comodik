@@ -98,4 +98,10 @@ class TypeController extends Controller
         Type::destroy($id);
         return redirect('admin/type');
     }
+
+    public function getAll()
+    {
+        $types = Type::all();
+        return response(['types' => $types]);
+    }
 }

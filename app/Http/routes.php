@@ -45,6 +45,11 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::post('callback', 'UserController@callback');
 
+Route::get('page/{type_id}/type', 'PageController@getByType');
+
+Route::get('page/{id}', 'PageController@showPage');
+
+Route::get('menu', 'TypeController@getAll');
 
 Route::any('{path?}', function()
 {

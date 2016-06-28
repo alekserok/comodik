@@ -1,23 +1,19 @@
 app.controller('MainController', function ($http, $scope, toastr) {
     $scope.flag = false;
-    $scope.callBack = function (data) {
-        if (data == undefined) toastr.error('Введите пожалуйста Ваши данные!');
-        else if (data.phone == undefined) toastr.error('Введите пожалуйста номер телефона!');
-        else if (data.name == undefined) toastr.error('Введите пожалуйста Ваше имя');
-        else {
-            $scope.flag = true;
-            $http({
-                method: 'POST',
-                url: '/callback',
-                data: data
-            }).then(function (data) {
-                $scope.flag = false;
-                toastr.success('Мы свяжемся с Вами в ближайшее время!');
-            }, function (data) {
-                $scope.flag = false;
-                toastr.warning('')
-            });
-        }
+    $scope.mainMenu = [];
+    $scope.categories = [];
 
-    }
+    $http({
+        method: 'GET',
+        url: '/menu'
+    }).then(function (data) {
+        for (var i in data.data.types){
+            if (data.data.types[i].parent_id == null)
+                $scope.mainMenu.push(data.data.types[i]);
+            else $scope.categories.push(data.data.types[i]);
+        }
+        console.log($scope.mainMenu);
+    }, function (data) {
+        console.log(data);
+    });
 });

@@ -44,8 +44,7 @@ class PageController extends Controller
     public function create()
     {
         $types = Type::typeList();
-        $types[0] = 'Корінь';
-        return view('page.create', ['types' => $types, 'currentType' => 0]);
+        return view('page.create', ['types' => $types, 'currentType' => 1]);
     }
 
     /**
@@ -73,7 +72,6 @@ class PageController extends Controller
     {
         $page = $this->page->findOrFail($nid);
         $types = Type::typeList();
-        $types[0] = 'Корінь';
         $currentType = $page->type_id;
         return view('page.edit', compact('page', 'types', 'currentType'));
     }
@@ -139,23 +137,24 @@ class PageController extends Controller
 
         return $request;
     }
-
+    
     /**
+     * @param $type_id
      * @return array|\Illuminate\View\View|mixed
      */
-    public function page()
+    public function getByType($type_id)
     {
-        $page = $this->page->where('lang', LOCALE)->orderBy('created_at', 'desc')->get();
-        return view('page', compact('page'));
+        $pages = $this->page->where('type_id', $type_id)->get();
+        return response(['pages' => $pages]);
     }
 
     /**
-     * @param $nid
+     * @param $id
      * @return array|\Illuminate\View\View|mixed
      */
-    public function showPage($nid)
+    public function showPage($id)
     {
-        $page = $this->page->find($nid);
-        return view('show_page', compact('page'));
+        $page = $this->page->find($id);
+        return response($page);
     }
 }
