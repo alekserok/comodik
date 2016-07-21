@@ -24,15 +24,19 @@
         background-color: white;
         border: none;
         font-size: 12px;
+        margin-top: 13px;
     }
     #main-menu  > li > a{
         height: 70px;
-        background-color: rgb(113, 176, 62);
+        background-color: #23AF05;
         color: white;
     }
     #main-menu > li > a:hover, #main-menu > li > a:focus {
         text-decoration: none;
-        background-color: #55901f;
+        background-color: #008509;
+    }
+    .menu-first-val {
+        font-weight: bolder;
     }
 </style>
     <nav class="navbar navbar-default" ng-controller="MainController" >
@@ -65,7 +69,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 <div class="container">
-    <img id="logo" src="img_web/Q2.jpg" style="">
+    <img id="logo" src="img_web/COMODlogo2.png" style="width: 400px">
     <div id="phone" style="float: right">
         <p style="font-size: 17px">
             <img style="vertical-align: text-bottom;" src="img_web/kuivstar.png">(067) 777-77-77 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -96,13 +100,13 @@
     <div class="masthead">
         <nav>
             <ul class="nav nav-justified" id="main-menu">
-                <li><a href="#"><img src="img_web/telega3.png"><br>Всі товари</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Кухні</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Спальна кімната</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Вітальня (зал)</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Дитяча кімната</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Передпокій (прихожа)</a></li>
-                <li><a href="#"><img src="img_web/telega3.png"><br>Комерційні меблі</a></li>
+                <li><a href="#" class="menu-first-val"><img src="img_web/kitchen_white.png"><br><span style="font-size: 22px"> ВСІ ТОВАРИ</span></a></li>
+                <li><a href="#"><img src="img_web/kitchen_white.png"><br>Кухні</a></li>
+                <li><a href="#"><img src="img_web/bedroom_white.png"><br>Спальна кімната</a></li>
+                <li><a href="#"><img src="img_web/kids_white.png"><br>Вітальня (зал)</a></li>
+                <li><a href="#"><img src="img_web/hall_white.png"><br>Дитяча кімната</a></li>
+                <li><a href="#"><img src="img_web/hallway_white.png"><br>Передпокій (прихожа)</a></li>
+                <li><a href="#"><img src="img_web/office_white.png"><br>Комерційні меблі</a></li>
             </ul>
         </nav>
     </div>

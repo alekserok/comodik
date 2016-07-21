@@ -2,8 +2,8 @@ app.controller('MainController', function ($http, $scope, toastr) {
     $scope.flag = false;
     $scope.mainMenu = [];
     $scope.categories = [];
-
-    $http({
+    
+    /*$http({
         method: 'GET',
         url: '/menu'
     }).then(function (data) {
@@ -13,6 +13,16 @@ app.controller('MainController', function ($http, $scope, toastr) {
             else $scope.categories.push(data.data.types[i]);
         }
         console.log($scope.mainMenu);
+    }, function (data) {
+        console.log(data);
+    });*/
+
+    $http({
+        method: 'GET',
+        url: '/gallery/images'
+    }).then(function (data) {
+        console.log(data.data.images);
+        $scope.slider = data.data.images;
     }, function (data) {
         console.log(data);
     });

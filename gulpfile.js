@@ -22,12 +22,15 @@ var paths = {
         "node_modules/angular-cookies/angular-cookies.min.js",
         "node_modules/angular-animate/angular-animate.min.js",
         'node_modules/angular-toastr/dist/angular-toastr.tpls.js',
+        "node_modules/angular-touch/angular-touch.js",
+        "node_modules/angular-carousel/dist/angular-carousel.js",
         "resources/comodik_web/js/*",
         "resources/comodik_web/controllers/*"
     ],
     css: [
         'resources/comodik_web/css/*',
-        "node_modules/angularjs-toaster/toaster.min.css"
+        "node_modules/angularjs-toaster/toaster.min.css",
+        "node_modules/angular-carousel/dist/angular-carousel.css"
     ],
     html: [
         'resources/comodik_web/views/*.html'

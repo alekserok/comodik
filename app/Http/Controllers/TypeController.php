@@ -8,6 +8,7 @@ use App\Type;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Storage;
 
 class TypeController extends Controller
 {
@@ -103,5 +104,14 @@ class TypeController extends Controller
     {
         $types = Type::all();
         return response(['types' => $types]);
+    }
+    
+    public function getImages()
+    {
+        $images = Storage::disk('web')->files('gallery');
+        foreach ($images as $k=>$v) {
+            $images[$k] = 'http://comodik.dev/img_web/' . $v;
+        }
+        return response(['images' => $images]);
     }
 }

@@ -1,5 +1,5 @@
 
-var app = angular.module('comodik', ['ngRoute', 'ngCookies', 'ngAnimate', 'toastr']);
+var app = angular.module('comodik', ['ngRoute', 'ngCookies', 'ngAnimate', 'toastr', 'angular-carousel']);
 
 app.constant('env', {
 });

@@ -51,6 +51,8 @@ Route::get('page/{id}', 'PageController@showPage');
 
 Route::get('menu', 'TypeController@getAll');
 
+Route::get('gallery/images', 'TypeController@getImages');
+
 Route::any('{path?}', function()
 {
     return File::get(public_path() . '/index.html');

@@ -1,25 +1,57 @@
-<hr class="featurette-divider">
-
-<div class="row featurette">
-    <div class="col-md-7 {{inverse_text}}">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5 ">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
+<style>
+    .sliders {
+        width: 500px;
+        height: 230px;
+        margin: auto
+    }
+    .indicators {
+        margin: auto; display: table;
+    }
+</style>
+<div class="row" style="margin-top: 13px">
+<div class="col-lg-6">
+    <ul rn-carousel class="image sliders"
+        rn-carousel-index="carouselIndex2"
+        rn-carousel-buffered
+        rn-carousel-pause-on-hover
+        rn-carousel-auto-slide>
+        <li ng-repeat="slide in slider">
+            <div class="layer sliders" ng-style="{'background-image': 'url(' + slide + ')'}"style="background-image: url(&quot;http://lorempixel.com/450/300/sports/2&quot;);">dsd<!--<img src="{{ slide }}">--></div>
+            <!--<div ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding" style="background-image: url(&quot;http://lorempixel.com/450/300/sports/2&quot;);">-->
+        </li>
+    </ul>
+    <div rn-carousel-indicators=""
+         ng-if="slider.length > 1"
+         slides="slider"
+         rn-carousel-index="carouselIndex2"
+         class="ng-scope ng-isolate-scope indicators">
+        <div class="rn-carousel-indicator">
+        <!-- ngRepeat: slide in slides -->
+            <span ng-repeat="slide in slider"
+                  ng-class="{active: $index==index}"
+                  ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope active">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --></div></div>
 </div>
 
-<hr class="featurette-divider">
-
-<div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-    </div>
-    <div class="col-md-5 col-md-pull-7">
-        <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-    </div>
+<div class="col-lg-6">
+    <ul rn-carousel class="image sliders"
+        rn-carousel-index="carouselIndex2"
+        rn-carousel-buffered
+        rn-carousel-pause-on-hover
+        rn-carousel-auto-slide>
+        <li ng-repeat="slide in slider">
+            <div class="layer sliders" ng-style="{'background-image': 'url(' + slide + ')'}"style="background-image: url(&quot;http://lorempixel.com/450/300/sports/2&quot;);">dsd<!--<img src="{{ slide }}">--></div>
+            <!--<div ng-style="{'background-image': 'url(' + slide.img + ')'}" class="bgimage ng-binding" style="background-image: url(&quot;http://lorempixel.com/450/300/sports/2&quot;);">-->
+        </li>
+    </ul>
+    <div rn-carousel-indicators=""
+         ng-if="slider.length > 1"
+         slides="slider"
+         rn-carousel-index="carouselIndex2"
+         class="ng-scope ng-isolate-scope indicators">
+        <div class="rn-carousel-indicator">
+            <!-- ngRepeat: slide in slides -->
+            <span ng-repeat="slide in slider"
+                  ng-class="{active: $index==index}"
+                  ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope active">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --><span ng-repeat="slide in slides" ng-class="{active: $index==index}" ng-click="goToSlide($index)" class="ng-scope">●</span><!-- end ngRepeat: slide in slides --></div></div>
 </div>
-
-<hr class="featurette-divider">
+</div>
